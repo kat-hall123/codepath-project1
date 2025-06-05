@@ -19,6 +19,10 @@ function loadPlaylists() {
 
         data.forEach(playlist => {
             const playlistCard = createPlaylistCard(playlist);
+
+            //check this
+            playlistCard.addEventListener('click', () => openModal(playlistCard));
+
             playlistList.appendChild(playlistCard);
         })
     })
@@ -54,10 +58,18 @@ function createPlaylistCard(playlist) {
     return cardSec;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    loadPlaylists();
-});
+document.addEventListener("DOMContentLoaded", () => loadPlaylists());
 
-function populateModal() {
-    console.log("Nothing right now")
-} 
+function openModal(card) {
+    document.getElementById('playlist-modal').style.display = 'flex';
+}
+
+document.getElementById('modal-close').addEventListener('click', () => document.getElementById('playlist-modal').style.display = 'none');
+
+const modalOverlay = document.getElementById('playlist-modal');
+const modalContent = document.getElementById('playlist-modal-content');
+modalOverlay.addEventListener('click', (event) => {
+    if(event.target === modalOverlay) {
+        modalOverlay.style.display = 'none';
+    }
+})

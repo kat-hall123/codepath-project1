@@ -21,17 +21,17 @@
 
         <div id="playlist-modal" class="modal-overlay" style="display: none">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span id ="modal-close" class="close">&times;</span>
 
                 <div class="playlist-header">
-                    <img src="assets/img/playlist.png" width="200px" alt="Playlist Image">
+                    <img id="modal-img" src="assets/img/playlist.png" width="200px" alt="Playlist Image">
                     <div class="playlist-info">
-                        <h1>Playlist Title</h1>
-                        <h2>Creator Name</h2>
+                        <h1 id="modal-title">Playlist Title</h1>
+                        <h2 id="modal-author">Creator Name</h2>
                     </div>
                 </div>
                 
-                <div class="playlist-songlist">
+                <div id="modal-songlist" class="playlist-songlist">
                     <div class="song">
                         <img src="assets/img/playlist.png" width="100px" alt="Song Image">
                     
@@ -45,10 +45,7 @@
                             <span>0:00</span>
                         </div>
                     </div>
-
-                    
                 </div>
-
             </div>
         </div>
 
