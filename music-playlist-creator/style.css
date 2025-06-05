@@ -32,8 +32,6 @@ footer {
 .card {
     margin: 3em;
     padding: 2em;
-    border: 1px solid black;
-
     border: 2px solid rgb(189, 189, 189);
     border-radius: 12px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.305)
