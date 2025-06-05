@@ -43,7 +43,8 @@ function createPlaylistCard(playlist) {
     authorElem.textContent = playlist.playlist_author;
 
     const likeCount = document.createElement('p');
-    likeCount.textContent = '5';
+    likeCount.textContent = `${playlist.playlist_likes}`;
+
 
     cardSec.appendChild(imgElem);
     cardSec.appendChild(titleElem);
@@ -56,3 +57,7 @@ function createPlaylistCard(playlist) {
 document.addEventListener("DOMContentLoaded", () => {
     loadPlaylists();
 });
+
+function populateModal() {
+    console.log("Nothing right now")
+} 

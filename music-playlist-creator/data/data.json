@@ -4,6 +4,7 @@
         "playlist_name": "Pop Hits",
         "playlist_author": "Meta",
         "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 1,
         "songs": [
             {
                 "title": "Lo-Fi Dreams",
@@ -25,6 +26,7 @@
         "playlist_name": "Country Hits",
         "playlist_author": "Sally",
         "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 2,
         "songs": [
             {
                 "title": "Lo-Fi Dreams",
@@ -46,6 +48,7 @@
         "playlist_name": "Rap Hits",
         "playlist_author": "Bob",
         "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 3,
         "songs": [
             {
                 "title": "Lo-Fi Dreams",
@@ -67,6 +70,7 @@
         "playlist_name": "Indie Hits",
         "playlist_author": "Kat",
         "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 4,
         "songs": [
             {
                 "title": "Lo-Fi Dreams",
