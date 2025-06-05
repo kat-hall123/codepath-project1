@@ -20,8 +20,11 @@ function loadPlaylists() {
         data.forEach(playlist => {
             const playlistCard = createPlaylistCard(playlist);
 
-            //check this
-            playlistCard.addEventListener('click', () => openModal(playlist));
+            playlistCard.addEventListener('click', (event) => {
+                if(!event.target.classList.contains('fa-heart')){
+                    openModal(playlist);
+                }
+            });
 
             playlistList.appendChild(playlistCard);
         })
@@ -46,19 +49,45 @@ function createPlaylistCard(playlist) {
     const authorElem = document.createElement('h3');
     authorElem.textContent = playlist.playlist_author;
 
-    const likeCount = document.createElement('p');
-    likeCount.textContent = `${playlist.playlist_likes}`;
+    const likeContainer = document.createElement('div');
+    likeContainer.className = 'like-container';
 
+    const heartIcon = document.createElement('i');
+    heartIcon.className = 'fa-regular fa-heart';
+
+    const likeCount = document.createElement('span');
+    likeCount.textContent = ` ${playlist.playlist_likes}`;
+
+    heartIcon.addEventListener('click', (event) => {
+        toggleLike(playlist, heartIcon, likeCount);
+    });
+
+    likeContainer.appendChild(heartIcon);
+    likeContainer.appendChild(likeCount);
 
     cardSec.appendChild(imgElem);
     cardSec.appendChild(titleElem);
     cardSec.appendChild(authorElem);
-    cardSec.appendChild(likeCount);
+    cardSec.appendChild(likeContainer);
 
     return cardSec;
 }
 
 document.addEventListener("DOMContentLoaded", () => loadPlaylists());
+
+function toggleLike(playlist, heartIcon, likeCount, likeContainer) {
+    const isLiked = heartIcon.classList.contains('fa-solid');
+
+    if(isLiked) {
+        heartIcon.className = 'fa-regular fa-heart';
+        playlist.playlist_likes--;
+    } else{
+        heartIcon.className = 'fa-solid fa-heart';
+        playlist.playlist_likes++;
+    }
+
+    likeCount.textContent = ` ${playlist.playlist_likes}`;
+}
 
 function openModal(playlist) {
     document.getElementById('playlist-modal').style.display = 'flex';
@@ -79,7 +108,7 @@ function openModal(playlist) {
         const songDiv = document.createElement('div');
         songDiv.className = 'song';
         songDiv.innerHTML = `
-            <img src="${song.art}" width="100px" alt="Song Image">
+            <img src="${song.art}" width="60px" height="60px" alt="Song Image">
 
             <div class="song-info">
                 <span class="song-title">${song.title}</span>

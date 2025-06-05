@@ -64,8 +64,8 @@ footer {
     border: 1px solid black;
     padding: 0.5em;
 
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 80%;
 
     overflow: auto;
 
@@ -107,6 +107,7 @@ footer {
     padding:0.5em;
     display: flex;
     flex-direction: row;
+    height: 32%;
 }
 .song-info {
     padding: 0 10em 0 0.5em;
@@ -118,4 +119,19 @@ footer {
 .song-duration {
     margin-left: 15em;
     margin-top: 2.5em;
+}
+
+.like-container {
+    align-items: center;
+}
+
+.like-container i:hover {
+    color: black;
+    font-weight: 900; 
+}
+
+.like-container.liked {
+    color: red;
+    font-weight: 900; 
+    opacity: 0.6;
 }
