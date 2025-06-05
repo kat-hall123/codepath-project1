@@ -37,8 +37,10 @@ footer {
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.305)
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
     background-color: rgba(143, 143, 143, 0.168);
+    cursor: pointer;
 }
 
 .modal-overlay {
@@ -69,8 +71,6 @@ footer {
 
     display: flex;
     flex-direction: column;
-    
-
 }
 
 .playlist-header {

@@ -10,13 +10,15 @@
                 "title": "Lo-Fi Dreams",
                 "artist": "DJ Calm",
                 "album": "Study Beats",
-                "duration": "3:15"
+                "duration": "3:15",
+                "art": "assets/img/song.png"
             },
             {
                 "title": "Rainy Mood",
                 "artist": "LoSound",
                 "album": "Chill Vibes",
-                "duration": "2:47"
+                "duration": "2:47",
+                "art": "assets/img/song.png"
             }
         ]
     }, 
@@ -29,16 +31,18 @@
         "playlist_likes": 2,
         "songs": [
             {
-                "title": "Lo-Fi Dreams",
+                "title": "Country Song",
                 "artist": "DJ Calm",
                 "album": "Study Beats",
-                "duration": "3:15"
+                "duration": "3:15",
+                "art": "assets/img/song.png"
             },
             {
-                "title": "Rainy Mood",
+                "title": "Another Country",
                 "artist": "LoSound",
                 "album": "Chill Vibes",
-                "duration": "2:47"
+                "duration": "2:47",
+                "art": "assets/img/song.png"
             }
         ]
     },
@@ -51,16 +55,18 @@
         "playlist_likes": 3,
         "songs": [
             {
-                "title": "Lo-Fi Dreams",
+                "title": "Rap Song",
                 "artist": "DJ Calm",
                 "album": "Study Beats",
-                "duration": "3:15"
+                "duration": "3:15",
+                "art": "assets/img/song.png"
             },
             {
                 "title": "Rainy Mood",
                 "artist": "LoSound",
                 "album": "Chill Vibes",
-                "duration": "2:47"
+                "duration": "2:47",
+                "art": "assets/img/song.png"
             }
         ]
     }, 
@@ -76,17 +82,16 @@
                 "title": "Lo-Fi Dreams",
                 "artist": "DJ Calm",
                 "album": "Study Beats",
-                "duration": "3:15"
+                "duration": "3:15",
+                "art": "assets/img/song.png"
             },
             {
                 "title": "Rainy Mood",
                 "artist": "LoSound",
                 "album": "Chill Vibes",
-                "duration": "2:47"
+                "duration": "2:47",
+                "art": "assets/img/song.png"
             }
         ]
     } 
-
-
-
 ]

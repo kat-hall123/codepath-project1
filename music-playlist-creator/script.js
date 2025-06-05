@@ -21,7 +21,7 @@ function loadPlaylists() {
             const playlistCard = createPlaylistCard(playlist);
 
             //check this
-            playlistCard.addEventListener('click', () => openModal(playlistCard));
+            playlistCard.addEventListener('click', () => openModal(playlist));
 
             playlistList.appendChild(playlistCard);
         })
@@ -60,8 +60,39 @@ function createPlaylistCard(playlist) {
 
 document.addEventListener("DOMContentLoaded", () => loadPlaylists());
 
-function openModal(card) {
+function openModal(playlist) {
     document.getElementById('playlist-modal').style.display = 'flex';
+    
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = playlist.playlist_art;
+
+    const modalTitle = document.getElementById('modal-title');
+    modalTitle.textContent = playlist.playlist_name;
+
+    const modalAuthor = document.getElementById('modal-author');
+    modalAuthor.textContent = playlist.playlist_author;
+
+    const modalSonglist = document.getElementById('modal-songlist');
+    modalSonglist.innerHTML = '';
+
+    playlist.songs.forEach(song => {
+        const songDiv = document.createElement('div');
+        songDiv.className = 'song';
+        songDiv.innerHTML = `
+            <img src="${song.art}" width="100px" alt="Song Image">
+
+            <div class="song-info">
+                <span class="song-title">${song.title}</span>
+                <span class="song-artist">${song.artist}</span>
+                <span class="song-album">${song.album}</span>
+            </div>
+            
+            <div class="song-duration">
+                <span>${song.duration}</span>
+            </div>
+        `;
+        modalSonglist.appendChild(songDiv);
+    });
 }
 
 document.getElementById('modal-close').addEventListener('click', () => document.getElementById('playlist-modal').style.display = 'none');
@@ -72,4 +103,4 @@ modalOverlay.addEventListener('click', (event) => {
     if(event.target === modalOverlay) {
         modalOverlay.style.display = 'none';
     }
-})
+});
