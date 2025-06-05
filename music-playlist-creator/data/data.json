@@ -19,6 +19,20 @@
                 "album": "Chill Vibes",
                 "duration": "2:47",
                 "art": "assets/img/song.png"
+            },
+            {
+                "title": "song 3",
+                "artist": "LoSound",
+                "album": "Chill Vibes",
+                "duration": "2:47",
+                "art": "assets/img/song.png"
+            },
+            {
+                "title": "song 4",
+                "artist": "LoSound",
+                "album": "Chill Vibes",
+                "duration": "2:47",
+                "art": "assets/img/song.png"
             }
         ]
     }, 

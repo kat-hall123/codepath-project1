@@ -12,7 +12,7 @@ function loadPlaylists() {
         const playlistList = document.getElementById('playlist-list');
         playlistList.innerHTML = '';
 
-        if(!data || data.length == 0) {
+        if(!data || data.length === 0) {
             playlistList.innerHTML = '<p>No playlists added.</p>';
             return;
         }
@@ -101,6 +101,9 @@ function openModal(playlist) {
     const modalAuthor = document.getElementById('modal-author');
     modalAuthor.textContent = playlist.playlist_author;
 
+    const shuffleButton = document.getElementById('shuffle-button');
+    shuffleButton.addEventListener('click', () => handleShuffle(playlist));
+
     const modalSonglist = document.getElementById('modal-songlist');
     modalSonglist.innerHTML = '';
 
@@ -108,7 +111,7 @@ function openModal(playlist) {
         const songDiv = document.createElement('div');
         songDiv.className = 'song';
         songDiv.innerHTML = `
-            <img src="${song.art}" width="60px" height="60px" alt="Song Image">
+            <img src="${song.art}" width="100px" height="100px" alt="Song Image">
 
             <div class="song-info">
                 <span class="song-title">${song.title}</span>
@@ -122,6 +125,39 @@ function openModal(playlist) {
         `;
         modalSonglist.appendChild(songDiv);
     });
+}
+
+function handleShuffle(playlist) {
+    const modalSonglist = document.getElementById('modal-songlist');
+    modalSonglist.innerHTML = '';
+
+    for(let i = playlist.songs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        const temp = playlist.songs[i];
+        playlist.songs[i] = playlist.songs[j];
+        playlist.songs[j] = temp;
+    }
+
+    playlist.songs.forEach(song => {
+        const songDiv = document.createElement('div');
+        songDiv.className = 'song';
+        songDiv.innerHTML = `
+            <img src="${song.art}" width="100px" height="100px" alt="Song Image">
+
+            <div class="song-info">
+                <span class="song-title">${song.title}</span>
+                <span class="song-artist">${song.artist}</span>
+                <span class="song-album">${song.album}</span>
+            </div>
+            
+            <div class="song-duration">
+                <span>${song.duration}</span>
+            </div>
+        `;
+        modalSonglist.appendChild(songDiv);
+    });
+
 }
 
 document.getElementById('modal-close').addEventListener('click', () => document.getElementById('playlist-modal').style.display = 'none');
