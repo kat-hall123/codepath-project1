@@ -1,27 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <!-- Your header content here -->
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Music Playlist Explorer</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <main> 
-        <!-- Your main content here -->
-    </main>
+    <body>
+        <header>
+            <h1>Music Playlist Explorer</h1>
+        </header>
 
-    <footer>
-        <!-- Your footer content here -->
-    </footer>
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
-</body>
+        <main class="playlist-cards"> 
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+
+            <section class="card">
+                <img src="assets/img/playlist.png" width="200px" alt="playlist picture">
+                <h2>Playlist Title</h2>
+                <h3>Creator Name</h3>
+                <p>Like Count</p>
+            </section>
+        </main>
+
+        <div id="playlist-modal" class="modal-overlay" >
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div class="playlist-header">
+                    <img src="assets/img/playlist.png" width="200px" alt="Playlist Image">
+                    <div class="playlist-info">
+                        <h1>Playlist Title</h1>
+                        <h2>Creator Name</h2>
+                    </div>
+                </div>
+                
+                <div class="playlist-songlist">
+                    <div class="song">
+                        <img src="assets/img/playlist.png" width="100px" alt="Song Image">
+                    
+                        <div class="song-info">
+                            <span class="song-title">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                            <span class="song-album">Album Name</span>
+                        </div>
+                        
+                        <div class="song-duration">
+                            <span>0:00</span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <h1>.</h1>
+        </footer>
+
+        <script src="data/data.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
