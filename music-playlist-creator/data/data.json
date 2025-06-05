@@ -107,5 +107,28 @@
                 "art": "assets/img/song.png"
             }
         ]
+    },
+    {
+        "playlistID": 4,
+        "playlist_name": "Indie Hits",
+        "playlist_author": "Kat",
+        "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 4,
+        "songs": [
+            {
+                "title": "Lo-Fi Dreams",
+                "artist": "DJ Calm",
+                "album": "Study Beats",
+                "duration": "3:15",
+                "art": "assets/img/song.png"
+            },
+            {
+                "title": "Rainy Mood",
+                "artist": "LoSound",
+                "album": "Chill Vibes",
+                "duration": "2:47",
+                "art": "assets/img/song.png"
+            }
+        ]
     } 
 ]

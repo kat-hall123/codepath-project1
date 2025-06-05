@@ -2,21 +2,45 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background: linear-gradient(rgb(99, 99, 99), rgb(38, 38, 38));
 }
 
 header {
-    padding: 1em;
+    height: 5em;
 
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-    background-color: grey;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+.featured-all {
+    display: flex;
+    gap: 1.25em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-all a {
+    padding: 0.5em 1em;
+
+    background: rgba(0, 0, 0, 0.394);
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.featured-all a:hover{
+    background: rgba(122, 122, 122, 0.394);
 }
 
 footer {
-    padding: 0.01em;
-
-    background-color: grey;
+    height: 50px;
+    background-color: rgb(32, 32, 32);
 }
 
 .playlist-cards {
@@ -34,12 +58,14 @@ footer {
     padding: 2em;
     border: 2px solid rgb(189, 189, 189);
     border-radius: 12px;
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.305)
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.305);
+
+    background: white;
 }
 
 .card:hover,
 .card:focus {
-    background-color: rgba(143, 143, 143, 0.168);
+    background-color: rgba(180, 180, 180, 0.906);
     cursor: pointer;
 }
 
@@ -109,6 +135,12 @@ footer {
     flex-direction: row;
     height: 100px;
 }
+
+.song:hover {
+    background: rgba(216, 216, 216, 0.589);
+    cursor: pointer;
+}
+
 .song-info {
     padding: 0 10em 0 0.5em;
     display: flex;
@@ -134,4 +166,8 @@ footer {
     color: red;
     font-weight: 900; 
     opacity: 0.6;
+}
+
+.shuffle-btn {
+    cursor: pointer;
 }
