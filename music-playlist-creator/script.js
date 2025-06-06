@@ -110,6 +110,10 @@ function createPlaylistCard(playlist) {
     const authorElem = document.createElement('h3');
     authorElem.textContent = `By: ${playlist.playlist_author}`;
 
+    const dateElem = document.createElement('p');
+    const dateElemTransf = new Date(playlist.date_added);
+    dateElem.textContent = `Added: ${dateElemTransf.toLocaleDateString()}`;
+
     const likeContainer = document.createElement('div');
     likeContainer.className = 'like-container';
 
@@ -130,6 +134,7 @@ function createPlaylistCard(playlist) {
     cardSec.appendChild(titleElem);
     cardSec.appendChild(authorElem);
     cardSec.appendChild(likeContainer);
+    cardSec.appendChild(dateElem);
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -178,10 +183,26 @@ document.addEventListener("DOMContentLoaded", () => {
         let sorted = [...allPlaylists];
 
         if(value === 'name') {
-            
+            sorted.sort((a, b) => 
+                a.playlist_name.localeCompare(b.playlist_name.toLowerCase())
+            );
+        } else if(value === 'likes') {
+            sorted.sort((a, b) => {
+                if(a.playlist_likes === b.playlist_likes) {
+                    return a.playlist_name.localeCompare(b.playlist_name.toLowerCase());
+                }
+                return b.playlist_likes - a.playlist_likes;
+            });
+        } else if(value === 'date-added') {
+            sorted.sort((a, b) => 
+                new Date(b.date_added) - new Date(a.date_added)
+            );
+        } else {
+            displayPlaylists(allPlaylists);
         }
 
-    })
+        displayPlaylists(sorted);
+    });
 });
 
 function toggleLike(playlist, heartIcon, likeCount, likeContainer) {
@@ -254,12 +275,14 @@ function handleShuffle(playlist) {
         const songDiv = document.createElement('div');
         songDiv.className = 'song';
         songDiv.innerHTML = `
-            <img src="${song.art}" width="100px" height="100px" alt="Song Image">
+            <div class="song-img-info">
+                <img src="${song.art}" width="100px" height="100px" alt="Song Image">
 
-            <div class="song-info">
-                <span class="song-title">${song.title}</span>
-                <span class="song-artist">${song.artist}</span>
-                <span class="song-album">${song.album}</span>
+                <div class="song-info">
+                    <span class="song-title">${song.title}</span>
+                    <span class="song-artist">${song.artist}</span>
+                    <span class="song-album">${song.album}</span>
+                </div>
             </div>
             
             <div class="song-duration">
