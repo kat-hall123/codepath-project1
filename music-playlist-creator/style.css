@@ -39,7 +39,7 @@ header {
 }
 
 footer {
-    height: 50px;
+    height: 70px;
     background-color: rgb(32, 32, 32);
 }
 
@@ -91,7 +91,7 @@ footer {
     border: 1px solid black;
     padding: 0.5em;
 
-    width: 70%;
+    width: 50%;
     height: 80%;
 
     overflow: auto;
@@ -129,17 +129,21 @@ footer {
 }
 
 .song {
-    border: 1px solid black;
+    background: rgba(211, 211, 211, 0.818);
     margin: 0 0 1em 0;
     padding:0.5em;
+
     display: flex;
     flex-direction: row;
+
     height: 100px;
+
+    border-radius: 12px;
 }
 
 .song:hover {
-    background: rgba(216, 216, 216, 0.589);
     cursor: pointer;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.377);
 }
 
 .song-info {
@@ -180,9 +184,11 @@ footer {
 }
 
 #featured-playlist-img {
-    height: 40em;
-    width: 40em;
-    margin: 6em 0em 0em 4em;
+    height: 45em;
+    width: 45em;
+    margin: 7em 0em 0em 4em;
+
+    border-radius: 12px;
 }
 
 #featured-title-songs {
@@ -191,8 +197,14 @@ footer {
 
 #featured-playlist-title {
     text-align: center;
+    text-transform: uppercase;
 }
 
-#featured-playlist-songlist {
-    overflow: auto;
+.delete-btn {
+    margin: 1em 0em;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    background: rgba(255, 160, 160, 0.581);
 }

@@ -72,7 +72,7 @@ function loadPlaylists() {
             const playlistCard = createPlaylistCard(playlist);
 
             playlistCard.addEventListener('click', (event) => {
-                if(!event.target.classList.contains('fa-heart')){
+                if(!event.target.classList.contains('fa-heart') && !event.target.classList.contains('delete-btn')){
                     openModal(playlist);
                 }
             });
@@ -120,6 +120,15 @@ function createPlaylistCard(playlist) {
     cardSec.appendChild(titleElem);
     cardSec.appendChild(authorElem);
     cardSec.appendChild(likeContainer);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-btn';
+    deleteButton.addEventListener('click', (event) => {
+        cardSec.remove();
+    });
+    cardSec.appendChild(deleteButton);
+
 
     return cardSec;
 }
