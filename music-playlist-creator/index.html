@@ -27,6 +27,19 @@
             </div>
         </header>
 
+        <section class="midsection">
+            <div id="sort-bar">
+                <label for="sort-select">Sort by:</label>
+                <select name="options" id="sort-select">
+                    <option value="name">Playlist Name (A-Z)</option>
+                    <option value="likes">Likes (High to Low)</option>
+                    <option value="date-added">Date Added (Recent to Oldest)</option>
+                </select>
+            </div>
+
+            <div id="add-playlist-btn"></div>
+        </section>
+
         <main class="playlist-cards" id="playlist-list"> </main>
 
         <div id="playlist-modal" class="modal-overlay" style="display: none">

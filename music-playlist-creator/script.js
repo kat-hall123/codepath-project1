@@ -36,7 +36,7 @@ function loadFeaturedPlaylist() {
                         <span class="song-album">${song.album}</span>
                     </div>
                 </div>
-                
+
                 <div class="song-duration">
                     <span>${song.duration}</span>
                 </div>
@@ -153,12 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchResult = searchInput.value.toLowerCase();
         
         const filteredResults = allPlaylists.filter(playlist => 
-            playlist.playlist_name.toLowerCase() === searchResult ||
-            playlist.playlist_author.toLowerCase() === searchResult
+            playlist.playlist_name.toLowerCase().includes(searchResult) ||
+            playlist.playlist_author.toLowerCase().includes(searchResult)
         );
         displayPlaylists(filteredResults);
     }
 
+    searchInput.addEventListener('input', handleSearch);
     searchButton.addEventListener('click', handleSearch);
     searchInput.addEventListener('keydown', (event) => {
         if(event.key === 'Enter') {
@@ -169,6 +170,18 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.value = '';
         displayPlaylists(allPlaylists);
     });
+
+    const sortSelect = document.getElementById('sort-select');
+
+    sortSelect.addEventListener('change', () => {
+        const value = sortSelect.value;
+        let sorted = [...allPlaylists];
+
+        if(value === 'name') {
+            
+        }
+
+    })
 });
 
 function toggleLike(playlist, heartIcon, likeCount, likeContainer) {
