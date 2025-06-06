@@ -19,7 +19,7 @@
     {
         "playlistID": 2,
         "playlist_name": "Country Roads",
-        "playlist_author": "Sally",
+        "playlist_author": "Jade",
         "playlist_art": "assets/img/count.jpg",
         "playlist_likes": 18,
         "songs": [
@@ -70,7 +70,7 @@
     {
         "playlistID": 5,
         "playlist_name": "Jazz Essentials",
-        "playlist_author": "Miles",
+        "playlist_author": "Jade",
         "playlist_art": "assets/img/playlist.png",
         "playlist_likes": 12,
         "songs": [

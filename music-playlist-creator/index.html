@@ -14,13 +14,20 @@
     <body>
         <header>
             <h1>Music Playlist Explorer</h1>
+
+            <section class="search-bar">
+                <button id="clear-btn">Clear</button>
+                <input type="text" id="search-input" placeholder="Search for song or artists...">
+                <button id="search-btn">Search</button>
+            </section>
+
             <div class="featured-all">
                 <a href="index.html"><span>All</span></a>
                 <a href="featured.html"><span>Featured</span></a>
             </div>
         </header>
 
-        <main class="playlist-cards" id="playlist-list"></main>
+        <main class="playlist-cards" id="playlist-list"> </main>
 
         <div id="playlist-modal" class="modal-overlay" style="display: none">
             <div id="playlist-modal-content" class="modal-content">
@@ -35,9 +42,7 @@
                     </div>
                 </div>
                 
-                
-
-                <div class="playlist-songlist" id="modal-songlist" >
+                <div class="playlist-songlist" id="modal-songlist">
                     <div class="song"></div>
                 </div>
             </div>

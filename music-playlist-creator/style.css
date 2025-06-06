@@ -11,6 +11,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 
     background-color: rgb(32, 32, 32);
     color: white;
@@ -135,6 +136,7 @@ footer {
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
     height: 100px;
 
@@ -153,9 +155,16 @@ footer {
     justify-content: space-evenly;
 }
 
+.song-img-info {
+    display: flex;
+    flex-direction: row;
+}
+
 .song-duration {
-    margin-left: 15em;
-    margin-top: 2.5em;
+    padding: 0.5em;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
 }
 
 .like-container {
@@ -207,4 +216,32 @@ footer {
 .delete-btn:hover {
     cursor: pointer;
     background: rgba(255, 160, 160, 0.581);
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5em;
+}
+
+#search-input {
+    padding: 1em 0.2em;
+    width: 400px;
+    background: rgb(203, 203, 203);
+    border-radius: 12px;
+    border: 1px solid #ffffff;
+}
+
+#search-btn,
+#clear-btn {
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#search-btn:hover {
+    background: rgb(148, 181, 148);
+}
+
+#clear-btn:hover {
+    background: rgb(181, 148, 148);
 }

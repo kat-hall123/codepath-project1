@@ -1,3 +1,5 @@
+let allPlaylists = [];
+
 function loadFeaturedPlaylist() {
     fetch('data/data.json')
     .then(response => {
@@ -25,12 +27,14 @@ function loadFeaturedPlaylist() {
             const songDiv = document.createElement('div');
             songDiv.className = 'song';
             songDiv.innerHTML = `
-                <img src="${song.art}" width="100px" height="100px" alt="Song Image">
+                <div class="song-img-info">
+                    <img src="${song.art}" width="100px" height="100px" alt="Song Image">
 
-                <div class="song-info">
-                    <span class="song-title">${song.title}</span>
-                    <span class="song-artist">${song.artist}</span>
-                    <span class="song-album">${song.album}</span>
+                    <div class="song-info">
+                        <span class="song-title">${song.title}</span>
+                        <span class="song-artist">${song.artist}</span>
+                        <span class="song-album">${song.album}</span>
+                    </div>
                 </div>
                 
                 <div class="song-duration">
@@ -49,6 +53,7 @@ function loadFeaturedPlaylist() {
 if(window.location.pathname.includes('featured.html')) {
     document.addEventListener('DOMContentLoaded', () => loadFeaturedPlaylist());
 }
+
 function loadPlaylists() {
     fetch('data/data.json')
     .then(response => {
@@ -60,28 +65,33 @@ function loadPlaylists() {
     .then(data => {
         console.log("Successfully loaded playlist cards", data);
 
-        const playlistList = document.getElementById('playlist-list');
-        playlistList.innerHTML = '';
-
-        if(!data || data.length === 0) {
-            playlistList.innerHTML = '<p>No playlists added.</p>';
-            return;
-        }
-
-        data.forEach(playlist => {
-            const playlistCard = createPlaylistCard(playlist);
-
-            playlistCard.addEventListener('click', (event) => {
-                if(!event.target.classList.contains('fa-heart') && !event.target.classList.contains('delete-btn')){
-                    openModal(playlist);
-                }
-            });
-
-            playlistList.appendChild(playlistCard);
-        })
+        allPlaylists = data;
+        displayPlaylists(allPlaylists);
     })
     .catch(error => {
         console.error('Error loading reviews:', error);
+    })
+}
+
+function displayPlaylists(allPlaylists) {
+    const playlistList = document.getElementById('playlist-list');
+    playlistList.innerHTML = '';
+
+    if(!allPlaylists || allPlaylists.length === 0) {
+        playlistList.innerHTML = '<p>No playlists added.</p>';
+        return;
+    }
+
+    allPlaylists.forEach(playlist => {
+        const playlistCard = createPlaylistCard(playlist);
+
+        playlistCard.addEventListener('click', (event) => {
+            if(!event.target.classList.contains('fa-heart') && !event.target.classList.contains('delete-btn')){
+                openModal(playlist);
+            }
+        });
+
+        playlistList.appendChild(playlistCard);
     })
 }
 
@@ -98,7 +108,7 @@ function createPlaylistCard(playlist) {
     titleElem.textContent = playlist.playlist_name;
 
     const authorElem = document.createElement('h3');
-    authorElem.textContent = playlist.playlist_author;
+    authorElem.textContent = `By: ${playlist.playlist_author}`;
 
     const likeContainer = document.createElement('div');
     likeContainer.className = 'like-container';
@@ -129,11 +139,37 @@ function createPlaylistCard(playlist) {
     });
     cardSec.appendChild(deleteButton);
 
-
     return cardSec;
 }
 
-document.addEventListener("DOMContentLoaded", () => loadPlaylists());
+document.addEventListener("DOMContentLoaded", () => {
+    loadPlaylists(); 
+
+    const searchButton = document.getElementById('search-btn');
+    const clearButton = document.getElementById('clear-btn');
+    const searchInput = document.getElementById('search-input');
+
+    function handleSearch() {
+        const searchResult = searchInput.value.toLowerCase();
+        
+        const filteredResults = allPlaylists.filter(playlist => 
+            playlist.playlist_name.toLowerCase() === searchResult ||
+            playlist.playlist_author.toLowerCase() === searchResult
+        );
+        displayPlaylists(filteredResults);
+    }
+
+    searchButton.addEventListener('click', handleSearch);
+    searchInput.addEventListener('keydown', (event) => {
+        if(event.key === 'Enter') {
+            handleSearch();
+        }
+    });
+    clearButton.addEventListener('click', () => {
+        searchInput.value = '';
+        displayPlaylists(allPlaylists);
+    });
+});
 
 function toggleLike(playlist, heartIcon, likeCount, likeContainer) {
     const isLiked = heartIcon.classList.contains('fa-solid');
@@ -159,7 +195,7 @@ function openModal(playlist) {
     modalTitle.textContent = playlist.playlist_name;
 
     const modalAuthor = document.getElementById('modal-author');
-    modalAuthor.textContent = playlist.playlist_author;
+    modalAuthor.textContent = `By: ${playlist.playlist_author}`;
 
     const shuffleButton = document.getElementById('shuffle-button');
     shuffleButton.addEventListener('click', () => handleShuffle(playlist));
@@ -171,12 +207,14 @@ function openModal(playlist) {
         const songDiv = document.createElement('div');
         songDiv.className = 'song';
         songDiv.innerHTML = `
-            <img src="${song.art}" width="100px" height="100px" alt="Song Image">
+            <div class="song-img-info">
+                <img src="${song.art}" width="100px" height="100px" alt="Song Image">
 
-            <div class="song-info">
-                <span class="song-title">${song.title}</span>
-                <span class="song-artist">${song.artist}</span>
-                <span class="song-album">${song.album}</span>
+                <div class="song-info">
+                    <span class="song-title">${song.title}</span>
+                    <span class="song-artist">${song.artist}</span>
+                    <span class="song-album">${song.album}</span>
+                </div>
             </div>
             
             <div class="song-duration">
