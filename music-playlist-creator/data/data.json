@@ -4,7 +4,7 @@
         "playlist_name": "Pop Hits",
         "playlist_author": "Meta",
         "playlist_art": "assets/img/pop.jpg",
-        "playlist_likes": 24,
+        "playlist_likes": 0,
         "date_added": "2024-06-01T10:15:00Z",
         "songs": [
             { "title": "Lo-Fi Dreams", "artist": "DJ Calm", "album": "Study Beats", "duration": "3:15", "art": "assets/img/p1.jpg" },

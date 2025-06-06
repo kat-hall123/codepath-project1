@@ -1,31 +1,29 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit Assignment: Music Playlist Explorer
 
-Submitted by: **NAME**
+Submitted by: **KATHERINE HALL**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **36** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site]()
 
 ### Application Features
 
 #### CORE FEATURES
 
-- [ ] **Display Playlists**
+- [x] **Display Playlists**
   - [ ] Dynamically render playlists on the homepage using JavaScript.
     - [ ] Playlists should be shown in grid view.
     - [ ] Playlist images should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
   - [ ] Fetch data from a provided Javascript file and use it to create interactive playlist tiles.
 
-- [ ] **Playlist Components**
+- [x] **Playlist Components**
   - [ ] Each tile should display the playlist's:
     - [ ] Cover image
     - [ ] Name
     - [ ] Author
     - [ ] Like count
 
-- [ ] **Playlist Details**
+- [x] **Playlist Details**
   - [ ] Create a modal pop-up view that displays detailed information about a playlist when a user clicks on a playlist tile.
   - [ ] The modal should show the playlist's:
     - [ ] Cover image
@@ -42,7 +40,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [ ] The backdrop should appear darker or in a different shade.
 
 - [ ] **Like Playlists**
-  - [ ] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
+  - [x] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
   - [ ] When the heart icon is clicked:
     - [ ] If previously unliked:
       - [ ] The like count on the playlist tile should increase by 1.
@@ -54,12 +52,12 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
       - [ ] a playlist with a like count of 0
       - [ ] a playlist with a non-zero like count
 
-- [ ] **Shuffle Songs**
+- [x] **Shuffle Songs**
   - [ ] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
   - [ ] When the shuffle button is clicked, the playlist's songs should display in a different order.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
   
-- [ ] **Featured Page**
+- [x] **Featured Page**
   - [ ] Application includes a dedicated page that randomly selects and displays a playlist, showing the playlist’s:
     - [ ] Playlist Image
     - [ ] Playlist Name
@@ -75,7 +73,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 #### STRETCH FEATURES
 
-- [ ] **Add New Playlists**
+- [x] **Add New Playlists**
   - [ ] Allow users to create new playlists.
   - [ ] Using a form, users can input playlist:
     - [ ] Name
@@ -99,11 +97,11 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [ ] Editing all of a playlist's features (name, creator, AND songs)
     - [ ] Editing some of a playlist's features (name, creator, OR songs) 
 
-- [ ] **Delete Playlists**
+- [x] **Delete Playlists**
   - [ ] Add a delete button to each playlist tile within the grid view.
   - [ ] When clicked, the playlist is removed from the playlist grid view.
 
-- [ ] **Search Functionality**
+- [x] **Search Functionality**
   - [ ] Implement a search bar that allows users to filter playlists by:
     - [ ] Name 
     - [ ] Author
@@ -123,7 +121,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
       - [ ] If users can delete a playlist, deleted playlists should no longer be included in search results.
       - **Note:** You will not be graded on the implementation of this optional subfeature to keep your grade of this stretch feature independent of your implementation of other stretch features. However, we highly suggest including this in your implementation to model realistic behavior of real applications. 
 
-- [ ] **Sorting Options**
+- [x] **Sorting Options**
   - [ ] Implement a drop-down or button options that allow users to sort the playlist by:
     - [ ] Name (A-Z alphabetically)
     - [ ] Number of likes (descending order)
