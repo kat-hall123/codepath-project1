@@ -7,11 +7,11 @@
         <title>Music Playlist Explorer</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     </head>
 
-    <body>
+    <body class="homepage">
         <header>
             <h1>Music Playlist Explorer</h1>
 
@@ -31,14 +31,56 @@
             <div id="sort-bar">
                 <label for="sort-select">Sort by:</label>
                 <select name="options" id="sort-select">
-                    <option value="default">Default</option>
+                    <option value="default">-Default-</option>
                     <option value="name">Playlist Name (A-Z)</option>
                     <option value="likes">Likes (High to Low)</option>
                     <option value="date-added">Date Added (Recent to Oldest)</option>
                 </select>
             </div>
 
-            <div id="add-playlist-btn"></div>
+            <div id="add-playlist">
+                <button id="add-playlist-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div id="add-playlist-modal" class="modal-overlay" style="display: none">
+                    <div class="modal-content">
+                        <span id="add-modal-close" class="close">&times;</span>
+                        <h2>Create New Playlist: </h2>
+                        <form id="playlist-form">
+                            <div id="new-playlist-info">
+                                <label for="new-playlist-name">Playlist Name: </label>
+                                <input type="text" id="new-playlist-name" required/>
+
+                                <label for="new-playlist-author">Author: </label>
+                                <input type="text" id="new-playlist-author" required/>
+                                
+                                <label for="new-playlist-image">Upload Playlist Cover: </label>
+                                <input type="file" id="new-playlist-image" accept="image/*"/>
+                            </div>
+                            
+                            <div id="new-playlist-songlist">
+                                <label for="new-playlist-song-title">Song Title: </label>
+                                <input type="text" class="new-playlist-song-title" required />
+
+                                <label for="new-playlist-song-artist">Song Artist: </label>
+                                <input type="text" class="new-playlist-song-artist" required />
+
+                                <label for="new-playlist-album">Album: </label>
+                                <input type="text" class="new-playlist-album" required/>
+
+                                <label for="new-playlist-song-duration">Song Duration: </label>
+                                <input type="text" class="new-playlist-song-duration" required />
+                            </div>
+
+                            <div id="new-playlist-buttons">
+                                <button type="button" id="add-song-btn">Add Another Song</button>
+                                <button type="submit" id="submit-btn">Add This Playlist</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <main class="playlist-cards" id="playlist-list"> </main>

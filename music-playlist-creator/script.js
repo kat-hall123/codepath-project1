@@ -37,6 +37,8 @@ function loadFeaturedPlaylist() {
                     </div>
                 </div>
 
+                <div class="song-album"></div>
+
                 <div class="song-duration">
                     <span>${song.duration}</span>
                 </div>
@@ -86,7 +88,7 @@ function displayPlaylists(allPlaylists) {
         const playlistCard = createPlaylistCard(playlist);
 
         playlistCard.addEventListener('click', (event) => {
-            if(!event.target.classList.contains('fa-heart') && !event.target.classList.contains('delete-btn')){
+            if(!event.target.classList.contains('fa-heart') && !event.target.classList.contains('delete-btn') && !event.target.classList.contains('fa-trash')){
                 openModal(playlist);
             }
         });
@@ -137,8 +139,12 @@ function createPlaylistCard(playlist) {
     cardSec.appendChild(dateElem);
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
     deleteButton.className = 'delete-btn';
+
+    const trashIcon = document.createElement('i');
+    trashIcon.className = 'fa-solid fa-trash';
+    deleteButton.append(trashIcon);
+
     deleteButton.addEventListener('click', (event) => {
         cardSec.remove();
     });
@@ -202,6 +208,96 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         displayPlaylists(sorted);
+    });
+
+    const addButton = document.getElementById('add-playlist-btn');
+    const addPlaylistModal = document.getElementById('add-playlist-modal');
+    const closeButton = document.getElementById('add-modal-close');
+    const form = document.getElementById('playlist-form');
+    const newSonglist = document.getElementById('new-playlist-songlist');
+    const addSongButton = document.getElementById('add-song-btn');
+
+    addButton.addEventListener('click', () => addPlaylistModal.style.display = 'flex');
+    closeButton.addEventListener('click', () => addPlaylistModal.style.display = 'none');
+
+    addSongButton.addEventListener('click', () => {
+        const songDiv = document.createElement('div');
+        songDiv.innerHTML = `
+            <div id="new-playlist-songlist">
+                <label for="new-playlist-song-title">Song Title: </label>
+                <input type="text" class="new-playlist-song-title" required />
+
+                <label for="new-playlist-song-artist">Song Artist: </label>
+                <input type="text" class="new-playlist-song-artist" required />
+
+                <label for="new-playlist-album">Album: </label>
+                <input type="text" class="new-playlist-album" required/>
+
+                <label for="new-playlist-song-duration">Song Duration: </label>
+                <input type="text" class="new-playlist-song-duration" required />
+            </div>
+        `;
+        newSonglist.appendChild(songDiv);
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('new-playlist-name').value;
+        const author = document.getElementById('new-playlist-author').value;
+
+        const coverImageInput = document.getElementById('new-playlist-image');
+        let coverImage = 'assets/img/playlist.png'; //default image
+
+        if (coverImageInput.files.length > 0) {
+            coverImage = URL.createObjectURL(coverImageInput.files[0]);
+        }
+
+        const titles = document.querySelectorAll('.new-playlist-song-title');
+        const artists = document.querySelectorAll('.new-playlist-song-artist');
+        const durations = document.querySelectorAll('.new-playlist-song-duration');
+        const albums = document.querySelectorAll('.new-playlist-album');
+
+        const songs = [];
+        for(let i = 0; i < titles.length; i++) {
+            songs.push({
+                title: titles[i].value,
+                artist: artists[i].value,
+                album: albums[i].value,
+                duration: durations[i].value,
+                art: 'assets/img/song.png' //placeholder
+            });
+        }
+        
+        const newPlaylist = {
+            playlistID: allPlaylists.length + 1,
+            playlist_name: name,
+            playlist_author: author,
+            playlist_art: coverImage,
+            playlist_likes: 0,
+            date_added: new Date().toISOString(),
+            songs: songs
+        }
+
+        allPlaylists.push(newPlaylist);
+        displayPlaylists(allPlaylists);
+
+        form.reset();
+        document.getElementById('new-playlist-songlist').innerHTML = `
+            <div id="new-playlist-songlist">
+                <label for="new-playlist-song-title">Song Title: </label>
+                <input type="text" class="new-playlist-song-title" required />
+
+                <label for="new-playlist-song-artist">Song Artist: </label>
+                <input type="text" class="new-playlist-song-artist" required />
+
+                <label for="new-playlist-album">Album: </label>
+                <input type="text" class="new-playlist-album" required/>
+
+                <label for="new-playlist-song-duration">Song Duration: </label>
+                <input type="text" class="new-playlist-song-duration" required />
+            </div>
+        `
+        addPlaylistModal.style.display = 'none';
     });
 });
 
