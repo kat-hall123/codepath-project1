@@ -1,3 +1,54 @@
+function loadFeaturedPlaylist() {
+    fetch('data/data.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Successfully loaded featured playlist", data);
+
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const playlist = data[randomIndex];
+
+        const featuredImg = document.getElementById('featured-playlist-img');
+        featuredImg.src = playlist.playlist_art;
+
+        const featuredTitle = document.getElementById('featured-playlist-title');
+        featuredTitle.textContent = playlist.playlist_name;
+
+        const featuredSonglist = document.getElementById('featured-playlist-songlist');
+        featuredSonglist.innerHTML = '';
+
+        playlist.songs.forEach(song => {
+            const songDiv = document.createElement('div');
+            songDiv.className = 'song';
+            songDiv.innerHTML = `
+                <img src="${song.art}" width="100px" height="100px" alt="Song Image">
+
+                <div class="song-info">
+                    <span class="song-title">${song.title}</span>
+                    <span class="song-artist">${song.artist}</span>
+                    <span class="song-album">${song.album}</span>
+                </div>
+                
+                <div class="song-duration">
+                    <span>${song.duration}</span>
+                </div>
+            `;
+            featuredSonglist.appendChild(songDiv);
+        });
+        
+    })
+    .catch(error => {
+        console.error('Error loading reviews:', error);
+    })
+}
+
+if(window.location.pathname.includes('featured.html')) {
+    document.addEventListener('DOMContentLoaded', () => loadFeaturedPlaylist());
+}
 function loadPlaylists() {
     fetch('data/data.json')
     .then(response => {
@@ -169,3 +220,4 @@ modalOverlay.addEventListener('click', (event) => {
         modalOverlay.style.display = 'none';
     }
 });
+

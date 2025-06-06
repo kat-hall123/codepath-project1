@@ -4,131 +4,135 @@
         "playlist_name": "Pop Hits",
         "playlist_author": "Meta",
         "playlist_art": "assets/img/playlist.png",
-        "playlist_likes": 1,
+        "playlist_likes": 24,
         "songs": [
-            {
-                "title": "Lo-Fi Dreams",
-                "artist": "DJ Calm",
-                "album": "Study Beats",
-                "duration": "3:15",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "Rainy Mood",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "song 3",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "song 4",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            }
+            { "title": "Lo-Fi Dreams", "artist": "DJ Calm", "album": "Study Beats", "duration": "3:15", "art": "assets/img/song.png" },
+            { "title": "Rainy Mood", "artist": "LoSound", "album": "Chill Vibes", "duration": "2:47", "art": "assets/img/song.png" },
+            { "title": "Flashback", "artist": "SynthWave", "album": "Neon Nights", "duration": "4:05", "art": "assets/img/song.png" },
+            { "title": "Light Echoes", "artist": "Ambient Flow", "album": "Space Tones", "duration": "2:58", "art": "assets/img/song.png" },
+            { "title": "Summer Daze", "artist": "MetroSun", "album": "Pool Party", "duration": "3:25", "art": "assets/img/song.png" },
+            { "title": "Pop Heart", "artist": "Luna", "album": "Velvet Sky", "duration": "3:45", "art": "assets/img/song.png" },
+            { "title": "Sunrise Groove", "artist": "Chroma", "album": "Daylight Drive", "duration": "4:00", "art": "assets/img/song.png" },
+            { "title": "Electric Touch", "artist": "Nova Pop", "album": "Bright Sparks", "duration": "3:12", "art": "assets/img/song.png" }
         ]
-    }, 
-
+    },
     {
         "playlistID": 2,
-        "playlist_name": "Country Hits",
+        "playlist_name": "Country Roads",
         "playlist_author": "Sally",
         "playlist_art": "assets/img/playlist.png",
-        "playlist_likes": 2,
+        "playlist_likes": 18,
         "songs": [
-            {
-                "title": "Country Song",
-                "artist": "DJ Calm",
-                "album": "Study Beats",
-                "duration": "3:15",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "Another Country",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            }
+            { "title": "Country Light", "artist": "Jackie Rae", "album": "Down Home", "duration": "3:12", "art": "assets/img/song.png" },
+            { "title": "Sunset Rider", "artist": "The Old Pines", "album": "Rustic Fields", "duration": "2:45", "art": "assets/img/song.png" },
+            { "title": "Barn Dance", "artist": "Tennessee Twang", "album": "Honky Tonk", "duration": "3:30", "art": "assets/img/song.png" },
+            { "title": "Dusty Trails", "artist": "Nash Valley", "album": "Country Heart", "duration": "4:10", "art": "assets/img/song.png" },
+            { "title": "River Run", "artist": "Jessie Lou", "album": "Saddle Songs", "duration": "3:20", "art": "assets/img/song.png" },
+            { "title": "Golden Hour", "artist": "Rae", "album": "Prairie Tunes", "duration": "2:55", "art": "assets/img/song.png" },
+            { "title": "Canyon Echo", "artist": "Wyatt Lee", "album": "Western Wind", "duration": "3:44", "art": "assets/img/song.png" },
+            { "title": "Campfire Tune", "artist": "Dust & Ember", "album": "Moonshine Nights", "duration": "3:33", "art": "assets/img/song.png" }
         ]
     },
-
     {
         "playlistID": 3,
-        "playlist_name": "Rap Hits",
+        "playlist_name": "Rap Rotation",
         "playlist_author": "Bob",
         "playlist_art": "assets/img/playlist.png",
-        "playlist_likes": 3,
+        "playlist_likes": 30,
         "songs": [
-            {
-                "title": "Rap Song",
-                "artist": "DJ Calm",
-                "album": "Study Beats",
-                "duration": "3:15",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "Rainy Mood",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            }
-        ]
-    }, 
-    
-    {
-        "playlistID": 4,
-        "playlist_name": "Indie Hits",
-        "playlist_author": "Kat",
-        "playlist_art": "assets/img/playlist.png",
-        "playlist_likes": 4,
-        "songs": [
-            {
-                "title": "Lo-Fi Dreams",
-                "artist": "DJ Calm",
-                "album": "Study Beats",
-                "duration": "3:15",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "Rainy Mood",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            }
+            { "title": "Hustle Flow", "artist": "Grime Time", "album": "Street Level", "duration": "2:48", "art": "assets/img/song.png" },
+            { "title": "Rhythm and Bars", "artist": "Verse One", "album": "Mic Check", "duration": "3:03", "art": "assets/img/song.png" },
+            { "title": "Night Drop", "artist": "Young Echo", "album": "Dark Beats", "duration": "3:15", "art": "assets/img/song.png" },
+            { "title": "Rapids", "artist": "Flowstate", "album": "Liquid Rhymes", "duration": "2:59", "art": "assets/img/song.png" },
+            { "title": "Backstreets", "artist": "MC Shade", "album": "Urban Pulse", "duration": "3:40", "art": "assets/img/song.png" },
+            { "title": "Bar Break", "artist": "Lil Syntax", "album": "Code Flow", "duration": "2:45", "art": "assets/img/song.png" },
+            { "title": "Top Flow", "artist": "Queen Key", "album": "Crowned", "duration": "3:00", "art": "assets/img/song.png" },
+            { "title": "Mic Drop", "artist": "D-Rill", "album": "Headliner", "duration": "3:22", "art": "assets/img/song.png" }
         ]
     },
     {
         "playlistID": 4,
-        "playlist_name": "Indie Hits",
+        "playlist_name": "Indie Vibes",
         "playlist_author": "Kat",
         "playlist_art": "assets/img/playlist.png",
-        "playlist_likes": 4,
+        "playlist_likes": 21,
         "songs": [
-            {
-                "title": "Lo-Fi Dreams",
-                "artist": "DJ Calm",
-                "album": "Study Beats",
-                "duration": "3:15",
-                "art": "assets/img/song.png"
-            },
-            {
-                "title": "Rainy Mood",
-                "artist": "LoSound",
-                "album": "Chill Vibes",
-                "duration": "2:47",
-                "art": "assets/img/song.png"
-            }
+            { "title": "Coastal Air", "artist": "The Waves", "album": "Seaside Sounds", "duration": "3:10", "art": "assets/img/song.png" },
+            { "title": "Window Glow", "artist": "Midtown May", "album": "Apartment Light", "duration": "2:50", "art": "assets/img/song.png" },
+            { "title": "Luna Talks", "artist": "Indi & Co", "album": "Moon Tunes", "duration": "3:18", "art": "assets/img/song.png" },
+            { "title": "Late Hours", "artist": "The Lofts", "album": "City Nights", "duration": "2:42", "art": "assets/img/song.png" },
+            { "title": "Morning Pages", "artist": "Sunrise Collective", "album": "New Dawn", "duration": "3:37", "art": "assets/img/song.png" },
+            { "title": "Caffeine Eyes", "artist": "Soundcycle", "album": "Buzz", "duration": "3:25", "art": "assets/img/song.png" },
+            { "title": "Weekender", "artist": "Urban Patch", "album": "Casual Days", "duration": "3:33", "art": "assets/img/song.png" },
+            { "title": "Spare Time", "artist": "Quiet Bloom", "album": "Idle Songs", "duration": "2:56", "art": "assets/img/song.png" }
         ]
-    } 
+    },
+    {
+        "playlistID": 5,
+        "playlist_name": "Jazz Essentials",
+        "playlist_author": "Miles",
+        "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 12,
+        "songs": [
+            { "title": "Smooth Steps", "artist": "Cool Breeze", "album": "Jazz Flow", "duration": "4:15", "art": "assets/img/song.png" },
+            { "title": "Night Train", "artist": "Lou B", "album": "Late Ride", "duration": "4:05", "art": "assets/img/song.png" },
+            { "title": "Velvet Sax", "artist": "Blue Tone", "album": "Midnight", "duration": "3:55", "art": "assets/img/song.png" },
+            { "title": "Downtown Drift", "artist": "Ella Sharp", "album": "City Cool", "duration": "3:25", "art": "assets/img/song.png" },
+            { "title": "Bassline Walk", "artist": "Groove Square", "album": "Jazzed Up", "duration": "3:50", "art": "assets/img/song.png" },
+            { "title": "Golden Notes", "artist": "The Swingers", "album": "Golden Hour", "duration": "3:45", "art": "assets/img/song.png" },
+            { "title": "Ivory Soul", "artist": "Major 7", "album": "Piano Tales", "duration": "4:00", "art": "assets/img/song.png" },
+            { "title": "Slow Glow", "artist": "Trio Drift", "album": "Lounge Night", "duration": "4:20", "art": "assets/img/song.png" }
+        ]
+    },
+    {
+        "playlistID": 6,
+        "playlist_name": "Electronic Surge",
+        "playlist_author": "Nova",
+        "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 16,
+        "songs": [
+            { "title": "Shockwave", "artist": "Pulse FX", "album": "Electric Dreams", "duration": "3:14", "art": "assets/img/song.png" },
+            { "title": "Neon Race", "artist": "TekDrive", "album": "Fast Lane", "duration": "3:33", "art": "assets/img/song.png" },
+            { "title": "Synth Blast", "artist": "Echo Drive", "album": "Light Years", "duration": "3:20", "art": "assets/img/song.png" },
+            { "title": "Cyber Love", "artist": "Binary Kiss", "album": "Tech Heart", "duration": "2:57", "art": "assets/img/song.png" },
+            { "title": "Voltage Vibe", "artist": "Nova", "album": "High Frequency", "duration": "3:18", "art": "assets/img/song.png" },
+            { "title": "Drive Code", "artist": "Magnetron", "album": "Circuit Loop", "duration": "3:00", "art": "assets/img/song.png" },
+            { "title": "Hertz Rush", "artist": "Fluxed", "album": "Bitstream", "duration": "3:50", "art": "assets/img/song.png" },
+            { "title": "Digital Rain", "artist": "Pixel Audio", "album": "Wetware", "duration": "4:05", "art": "assets/img/song.png" }
+        ]
+    },
+    {
+        "playlistID": 7,
+        "playlist_name": "R&B Soul",
+        "playlist_author": "Jade",
+        "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 14,
+        "songs": [
+            { "title": "Midnight Glow", "artist": "Soul Note", "album": "Late Lights", "duration": "3:50", "art": "assets/img/song.png" },
+            { "title": "Smooth Skin", "artist": "Velvet Era", "album": "Warm Evenings", "duration": "3:12", "art": "assets/img/song.png" },
+            { "title": "Harmony Way", "artist": "Sweet Phase", "album": "Nightfall", "duration": "3:30", "art": "assets/img/song.png" },
+            { "title": "Slow Motion", "artist": "J. Essence", "album": "In Time", "duration": "3:22", "art": "assets/img/song.png" },
+            { "title": "Silk Roads", "artist": "Wavelink", "album": "East Meets West", "duration": "3:35", "art": "assets/img/song.png" },
+            { "title": "Glow Flow", "artist": "Nova Soul", "album": "Eclipse", "duration": "3:45", "art": "assets/img/song.png" },
+            { "title": "Night Rhythm", "artist": "T. Vibe", "album": "Soft Jazzed", "duration": "3:10", "art": "assets/img/song.png" },
+            { "title": "Lavender Dreams", "artist": "DreamSet", "album": "Soul Tones", "duration": "3:38", "art": "assets/img/song.png" }
+        ]
+    },
+    {
+        "playlistID": 8,
+        "playlist_name": "Rock Anthems",
+        "playlist_author": "Axel",
+        "playlist_art": "assets/img/playlist.png",
+        "playlist_likes": 20,
+        "songs": [
+            { "title": "Thunder Rise", "artist": "Riff City", "album": "Amped Up", "duration": "3:55", "art": "assets/img/song.png" },
+            { "title": "Wired Soul", "artist": "Electric Rose", "album": "Raw Power", "duration": "3:45", "art": "assets/img/song.png" },
+            { "title": "Edge Run", "artist": "VoltSide", "album": "Grindline", "duration": "3:12", "art": "assets/img/song.png" },
+            { "title": "Rebel Tracks", "artist": "Fury League", "album": "Skull & Strings", "duration": "3:33", "art": "assets/img/song.png" },
+            { "title": "Ashes Awake", "artist": "Steel Shade", "album": "Burn It Out", "duration": "4:01", "art": "assets/img/song.png" },
+            { "title": "High Ground", "artist": "The Breakers", "album": "Skyfall", "duration": "3:29", "art": "assets/img/song.png" },
+            { "title": "Strings of Fire", "artist": "Neon Ash", "album": "White Heat", "duration": "3:15", "art": "assets/img/song.png" },
+            { "title": "Anthem Burn", "artist": "Echo Rock", "album": "Final Hour", "duration": "3:46", "art": "assets/img/song.png" }
+        ]
+    }
 ]
