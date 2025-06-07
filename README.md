@@ -39,8 +39,8 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
     - [ ] Appear floating on the screen.
     - [ ] The backdrop should appear darker or in a different shade.
 
-- [ ] **Like Playlists**
-  - [x] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
+- [x] **Like Playlists**
+  - [] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
   - [ ] When the heart icon is clicked:
     - [ ] If previously unliked:
       - [ ] The like count on the playlist tile should increase by 1.
