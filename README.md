@@ -131,10 +131,12 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 ### Walkthrough Video
 
 <div>
-  <a href="https://www.loom.com/share/608a906d362045e08c51a9810602e941">
-    <p>Music Playlist Explorer</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/608a906d362045e08c51a9810602e941-7590d179edc453ef-full-play.gif">
-  </a>
+    <a href="https://www.loom.com/share/608a906d362045e08c51a9810602e941">
+      <p>Videos | Library | Loom - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/608a906d362045e08c51a9810602e941">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/608a906d362045e08c51a9810602e941-7590d179edc453ef-full-play.gif">
+    </a>
 </div>
 
 ### Reflection
