@@ -4,7 +4,7 @@ Submitted by: **KATHERINE HALL**
 
 Estimated time spent: **36** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site]()
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://codepath-project1-rce8.onrender.com)
 
 ### Application Features
 
@@ -132,21 +132,26 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site]()
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+<div>
+  <a href="https://www.loom.com/share/608a906d362045e08c51a9810602e941">
+    <p>Music Playlist Explorer</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/608a906d362045e08c51a9810602e941-7590d179edc453ef-full-play.gif">
+  </a>
+</div>
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics in the lab definitely helped prepare me. Labs 1 & 2 gave me practice and guidance on designing the content of a website as well as its layout/design. Lab 3 helped me to understand the way buttons work and how JavaScript could provide actual events to occur on a website. Lab 4 helped me understand how content from a data file could be fetched and implemented, as well as the like feature. The only aspects of the project I felt unprepared for were the stretch features. This required a lot of outside resources and learning certain features myself. For example, I heavily used w3 schools to understand how to implement a search bar.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time, I would want to implement the edit playlist feature as that was the only stretch feature I did not do. I also would want to figure out how I could store the playlists I added. When I reload the page, any playlists I added would disappear. I also would try to add more icons as the buttons in the website, like a magnifying glass for the search button. This would look more user-friendly and is commonly seen on actual websites. Also, for adding playlists, I would want to see how I could add images to the songs I add. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+What went really well for me was organizing the content of the webpage and designing it. I struggled more in the JavaScript portion of the page because it required more thinking and understanding how each event/button connects to each other. However, I was able to still implement those JS features effectively, it just required more outsourcing for guidance and logial thinking. It was very rewarding to implement a feature and understand the intricacies behind it in JS though! I would say some of my peers had better-looking websites, so next time I would work on the design more. 
 
 ### Open-source libraries used
 
@@ -155,3 +160,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Shout out to all my instructors as well as the tech supports! All were very understanding when issues occurred and genuinely wanted to help me fix it, but also understand where I went wrong. 

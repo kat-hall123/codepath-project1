@@ -48,7 +48,7 @@ footer {
 }
 
 .playlist-cards {
-    margin: 2em 6em;
+    margin: 0em 1em;
     padding: 0em 2em;
 
     display: flex;
@@ -58,8 +58,8 @@ footer {
 }
 
 .card {
-    margin: 3em;
-    padding: 2em;
+    margin: 1em;
+    padding: 1em;
     border: 2px solid rgb(189, 189, 189);
     border-radius: 12px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.305);

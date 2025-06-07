@@ -109,20 +109,5 @@
             { "title": "Silk Roads", "artist": "Wavelink", "album": "East Meets West", "duration": "3:35", "art": "assets/img/p5.jpg" },
             { "title": "Glow Flow", "artist": "Nova Soul", "album": "Eclipse", "duration": "3:45", "art": "assets/img/p6.jpg" }
         ]
-    },
-    {
-        "playlistID": 8,
-        "playlist_name": "Rock Anthems",
-        "playlist_author": "Axel",
-        "playlist_art": "assets/img/rock.jpg",
-        "playlist_likes": 20,
-        "date_added": "2024-06-08T11:40:00Z",
-        "songs": [
-            { "title": "Thunder Rise", "artist": "Riff City", "album": "Amped Up", "duration": "3:55", "art": "assets/img/p1.jpg" },
-            { "title": "Wired Soul", "artist": "Electric Rose", "album": "Raw Power", "duration": "3:45", "art": "assets/img/p2.jpg" },
-            { "title": "Edge Run", "artist": "VoltSide", "album": "Grindline", "duration": "3:12", "art": "assets/img/p3.jpg" },
-            { "title": "Rebel Tracks", "artist": "Fury League", "album": "Skull & Strings", "duration": "3:33", "art": "assets/img/p4.jpg" },
-            { "title": "Ashes Awake", "artist": "Steel Shade", "album": "Burn It Out", "duration": "4:01", "art": "assets/img/p5.jpg" }
-        ]
     }
 ]
